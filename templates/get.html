@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'get.css' %}">
+    <title>Show all</title>
+</head>
+<body>
+    <div class="main">
+            <div class="card">
+                <h1>Task name: {{tasks.name}}</h1>
+                <p>Due date: {{tasks.due_date}}</p>
+                <p>Discraption: {{tasks.description}}</p>
+                <p>User: {{tasks.user}}</p>
+            </div>
+    </div>
+</body>
+</html>

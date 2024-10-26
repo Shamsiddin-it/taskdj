@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'all.css' %}">
+    <title>Show all</title>
+</head>
+<body>
+    <div class="main">
+        {% if tasks.count > 0 %}
+            {% for task in tasks%}
+            <a href="http://127.0.0.1:8000/get/{{task.id}}">
+            <div class="card">
+                <h1>Task name: {{task.name}}</h1>
+                <p>Due date: {{task.due_date}}</p>
+                <p>Discraption: {{task.description}}</p>
+                <p>User: {{task.user}}</p>
+            </div>
+            </a>
+            {% endfor %}
+        {% endif %}
+    </div>
+</body>
+</html>
